@@ -52,8 +52,11 @@ def cart(request):
                 'product' :{
                     'id':product.id,
                     'product':product.name,
-                    'price':product.price,  
+                    'price':product.price,
+                    'imageURL':product.imageURL,
                 },
+                'quantity':cart[i]["quantity"],
+                'get_total':total
             }
         
     context = {'items':items, 'order':order, 'cartItems': cartItems}

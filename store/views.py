@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 import json
 import datetime
-from . utils import cookieCart, cartData, guestOrder
+from . utils import cartData, guestOrder
 
 
 from .models import *

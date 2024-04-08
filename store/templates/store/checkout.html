@@ -172,12 +172,13 @@
             fetch(url, {
                 method:'POST',
                 headers:{
-                    'Content-Type':'applicaiton/json',
+                    'Content-Type':'application/json',
                     'X-CSRFToken':csrftoken,
                 }, 
                 body:JSON.stringify({'form':userFormData, 'shipping':shippingInfo}),
                 
             })
+            
             .then((response) => response.json())
             .then((data) => {
                   console.log('Success:', data)
@@ -185,8 +186,8 @@
                   cart = {}
                   document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
                   window.location.href = "{% url 'store' %}"
-        
                 })
+
         }
     </script>
     

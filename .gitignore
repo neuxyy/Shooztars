@@ -17,3 +17,4 @@ store/migrations/__pycache__/0002_product_image.cpython-312.pyc
 store/migrations/__pycache__/0003_rename_shippingadress_shippingaddress.cpython-312.pyc
 store/migrations/__pycache__/0004_remove_shippingaddress_state.cpython-312.pyc
 store/migrations/__pycache__/0005_alter_product_price.cpython-312.pyc
+db.sqlite3

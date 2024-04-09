@@ -45,12 +45,14 @@
 							</div>
 						</div>
 					</li>
+					{% if request.user.is_authenticated and request.user.is_staff %}
 					<li class="nav-item">
-						<button class="nav-link" onclick="location.href='#'">Add Poduct</button>
+						<a class="nav-link" href={% url 'admin:index' %}>Admin Page</a>
 					</li>
 					<li class="nav-item">
-						<button class="nav-link" onclick="location.href='#'">Admin Page</button>
+						<button class="nav-link red-button" onclick="location.href='{% url 'add_product'%}'">Add Product</button>
 					</li>
+					{% endif %}
 				</ul>
 				<div class="form-inline my-2 my-lg-0">
 					<div class="input-group">
@@ -62,12 +64,35 @@
 						</div>
 					</div>
 				</div>
+				
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Price Filter
+					</button>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						<form class="px-4 py-3">
+							<div class="form-group">
+								<label for="minPrice">Min Price: <span id="minPriceValue"></span></label>
+								<input type="number" class="form-control" id="minPriceInput" min="0" max="20000" value="10000" oninput="document.getElementById('minPrice').value = this.value; document.getElementById('minPriceValue').textContent = this.value">
+								<input type="range" class="form-control-range" id="minPrice" min="0" max="20000" value="10000" oninput="document.getElementById('minPriceInput').value = this.value; document.getElementById('minPriceValue').textContent = this.value">
+							</div>
+							<div class="form-group">
+								<label for="maxPrice">Max Price: <span id="maxPriceValue"></span></label>
+								<input type="number" class="form-control" id="maxPriceInput" min="0" max="20000" value="15000" oninput="document.getElementById('maxPrice').value = this.value; document.getElementById('maxPriceValue').textContent = this.value">
+								<input type="range" class="form-control-range" id="maxPrice" min="0" max="20000" value="15000" oninput="document.getElementById('maxPriceInput').value = this.value; document.getElementById('maxPriceValue').textContent = this.value">
+							</div>
+							<button type="submit" class="btn btn-primary">Apply</button>
+						</form>
+					</div>
+				</div>
+				
 				<div class="form-inline my-2 my-lg-0 ml-auto">
 					{% if user.is_authenticated %}
-						<span class="navbar-text"><strong style="color: white;">Hello, {{ user.username }}</strong></span>
-						<a href="{% url 'logout' %}" class="btn btn-warning" style="margin-left: 10px;">Logout</a>
+						<span class="navbar-text"><strong style="color: white;">Hello, {{ user.first_name }}</strong></span>
+						<a href="{% url 'profile' %}" class="btn btn-danger" style="margin-left: 10px;">Profile</a>
+						<button onclick="location.href='{% url 'logout' %}'" class="btn btn-warning" style="margin-left: 10px;">Logout</button>
 					{% else %}
-						<a href="{% url 'login' %}" class="btn btn-warning">Login</a>
+						<button onclick="location.href='{% url 'login' %}'" class="btn btn-warning">Login</button>
 					{% endif %}
 					<a href="{% url 'cart' %}">
 						<img id="cart-icon" src="{% static 'images/cart.png' %}">
@@ -96,5 +121,11 @@
 		 
 		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
 		 
+		<script>
+			window.onload = function() {
+				document.getElementById('minPriceValue').textContent = document.getElementById('minPrice').value;
+				document.getElementById('maxPriceValue').textContent = document.getElementById('maxPrice').value;
+			}
+		</script>
 	</body>
 </html>

@@ -1,0 +1,13 @@
+{% extends 'store/main.html'%}
+{% load static %}
+{% block content %}
+
+<h1>Welcome, {{ user.username }}</h1>
+<p>First name: {{ user.first_name }}</p>
+<p>Last name: {{ user.last_name }}</p>
+<p>Email: {{ user.email }}</p>
+<p>Staff status: {{ user.is_staff }}</p>
+<p>Active status: {{ user.is_active }}</p>
+<p>Date joined: {{ user.date_joined }}</p>
+
+{% endblock %}

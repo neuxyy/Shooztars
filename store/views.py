@@ -8,7 +8,7 @@ import json
 import datetime
 
 
-from .forms import OrderForm, CreateUserForm
+from .forms import OrderForm, CreateUserForm, ProductForm
 from . utils import cartData, guestOrder
 from .models import *
 
@@ -49,6 +49,11 @@ def LoginPage(request):
 def LogoutPage(request):
     logout(request)
     return redirect('store')
+
+def ProfilePage(request):
+    #Profile page
+    #Add CRUD for name,username etc.
+    return render(request, 'accounts/profile.html')
 
 def store(request):
     data = cartData(request)
@@ -104,8 +109,19 @@ def updateItem(request):
             orderItem.delete()
         
         return JsonResponse('Item was added successfully', safe=False)
-
-
+    
+def AddProduct(request):
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            product = form.save(commit=False)
+            if 'image' in request.FILES:
+                product.image = request.FILES['image']
+            product.save()
+            return redirect('store')
+    else:
+        form = ProductForm()
+    return render(request, 'store/add_product.html', {'form': form})
 
 def processOrder(request):
     transaction_id = datetime.datetime.now().timestamp()

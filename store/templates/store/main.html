@@ -32,9 +32,6 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="{% url 'store'%}">Store<span class="sr-only">(current)</span></a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
-					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							Language
@@ -47,6 +44,12 @@
 								<button class="dropdown-item btn btn-light" onclick="changeLanguage('EN')">EN</button>
 							</div>
 						</div>
+					</li>
+					<li class="nav-item">
+						<button class="nav-link" onclick="location.href='#'">Add Poduct</button>
+					</li>
+					<li class="nav-item">
+						<button class="nav-link" onclick="location.href='#'">Admin Page</button>
 					</li>
 				</ul>
 				<div class="form-inline my-2 my-lg-0">
@@ -62,7 +65,7 @@
 				<div class="form-inline my-2 my-lg-0 ml-auto">
 					{% if user.is_authenticated %}
 						<span class="navbar-text"><strong style="color: white;">Hello, {{ user.username }}</strong></span>
-						<button onclick="location.href='#'" class="btn btn-warning" style="margin-left: 10px;">Logout</button>
+						<a href="{% url 'logout' %}" class="btn btn-warning" style="margin-left: 10px;">Logout</a>
 					{% else %}
 						<a href="{% url 'login' %}" class="btn btn-warning">Login</a>
 					{% endif %}

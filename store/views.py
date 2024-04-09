@@ -46,6 +46,10 @@ def LoginPage(request):
     context = {}
     return render(request, 'accounts/login.html', context)
 
+def LogoutPage(request):
+    logout(request)
+    return redirect('store')
+
 def store(request):
     data = cartData(request)
     

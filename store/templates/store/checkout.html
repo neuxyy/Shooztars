@@ -5,6 +5,7 @@
         <div class="col-lg-6">
             <div class="box-element" id="form-wrapper"> 
                 <form id="form">
+
                     <div id="user-info">
                         <div class="form-field">
                             <input required class="form-control" type="text" name="name" placeholder="Name..">
@@ -122,6 +123,8 @@
             document.getElementById('form-button').classList.add("hidden")
             document.getElementById('payment-info').classList.remove("hidden")
             document.getElementById('shipping-info').classList.add("hidden")
+            document.getElementById('user-info').classList.add("hidden");
+            
         })
         function submitFormData(){
             console.log('Payment button clicked')

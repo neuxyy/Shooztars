@@ -53,7 +53,12 @@ def LogoutPage(request):
 def ProfilePage(request):
     #Profile page
     #Add CRUD for name,username etc.
-    return render(request, 'accounts/profile.html')
+    data = cartData(request)
+    
+    cartItems = data['cartItems']
+    context = {'cartItems': cartItems}
+    
+    return render(request, 'accounts/profile.html', context)
 
 def store(request):
     data = cartData(request)
@@ -111,6 +116,11 @@ def updateItem(request):
         return JsonResponse('Item was added successfully', safe=False)
     
 def AddProduct(request):
+    
+    data = cartData(request)
+    
+    cartItems = data['cartItems']
+    
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -121,7 +131,9 @@ def AddProduct(request):
             return redirect('store')
     else:
         form = ProductForm()
-    return render(request, 'store/add_product.html', {'form': form})
+    
+    context = {'cartItems': cartItems, 'form': form}
+    return render(request, 'store/add_product.html', context)
 
 def processOrder(request):
     transaction_id = datetime.datetime.now().timestamp()
@@ -148,6 +160,7 @@ def processOrder(request):
         address=data['shipping']['address'],
         city=data['shipping']['city'],
         zipcode=data['shipping']['zipcode'],
+        country=data['shipping']['country'],
         )
         
     return JsonResponse('Payment submitted..', safe=False)

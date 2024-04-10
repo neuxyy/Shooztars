@@ -1,4 +1,5 @@
 {% extends 'store/main.html'%}
+{% load i18n %}
 {% load static %}
 {% block content%}
     <div class="row">
@@ -8,59 +9,59 @@
 
                     <div id="user-info">
                         <div class="form-field">
-                            <input required class="form-control" type="text" name="name" placeholder="Name..">
+                            <input required class="form-control" type="text" name="name" placeholder="{% trans 'Name'%}">
                         </div>
                         <div class="form-field">
-                            <input required class="form-control" type="email" name="email" placeholder="Email..">
+                            <input required class="form-control" type="email" name="email" placeholder={% trans 'Email'%}>
                         </div>
                     </div>
                     
                     <div id="shipping-info">
                         <hr>
-                        <p>Shipping Information:</p>
+                        <p>{% trans 'Shipping Information:' %}</p>
                         <hr>
                         <div class="form-field">
                             <div>
-                                <small>Address</small>
+                                <small>{% trans 'Address'%}</small>
                             </div>
-                            <input class="form-control" type="text" name="address" placeholder="Address..">
+                            <input class="form-control" type="text" name="address" placeholder={% trans 'Address'%}>
                         </div>
                         <div class="form-field">
                             <div>
-                                <small>City</small>
+                                <small>{% trans 'City'%}</small>
                             </div>
-                            <input class="form-control" type="text" name="city" placeholder="City..">
+                            <input class="form-control" type="text" name="city" placeholder={% trans 'City'%}>
                         </div>
                         <div class="form-field">
                             <div>
-                                <small>Zip Code</small>
+                                <small>{% trans 'Zip Code'%}</small>
                             </div>
                             <input class="form-control" type="text" name="zipcode" placeholder="4000" pattern="[0-9]+" title="Only numbers">
                         </div>
                         <div class="form-field">
                             <div>
-                                <small>Country</small>
+                                <small>{% trans 'Country'%}</small>
                             </div>
-                            <input class="form-control" type="text" name="country" placeholder="Country..">
+                            <input class="form-control" type="text" name="country" placeholder={% trans 'Country'%}>
                         </div>
                     </div>
                     
                     <hr>
-                    <input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+                    <input id="form-button" class="btn btn-success btn-block" type="submit" value={% trans 'Continue'%}>
                 </form>
             </div>
             <br>
             <div class="box-element hidden" id="payment-info">
-                <small>Pay Options</small>
+                <small>{% trans 'Payment Options'%}</small>
                 <div id="paypal-button-container"></div>
             </div>
         </div>
         
         <div class="col-lg-6">
             <div class="box-element"> 
-                <a  class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; Back to Cart</a>
+                <a  class="btn btn-outline-dark" href="{% url 'cart' %}">&#x2190; {% trans 'Back to cart'%}</a>
                 <hr>
-                <h3>Order Summary</h3>
+                <h3>{% trans 'Order Summary'%}</h3>
                 <hr>
                 {% for item in items %}
                 <div class="cart-row">
@@ -70,8 +71,8 @@
 					<div style="flex:1"><p>{{item.quantity}}</p></div>
 				</div>
                 {% endfor %}
-                <h5>Items: {{order.get_cart_items}}</h5>
-                <h5>Total: {{order.get_cart_total|floatformat:2}}BGN</h5>
+                <h5>{% trans 'Items: '%}{{order.get_cart_items}}</h5>
+                <h5>{% trans 'Total: '%}{{order.get_cart_total|floatformat:2}}BGN</h5>
             <div>
         </div>
     </div>

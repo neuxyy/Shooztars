@@ -1,4 +1,5 @@
 {% extends 'store/main.html'%}
+{% load i18n %}
 {% load static %}
 {% block content%}
     <div class="row">
@@ -8,8 +9,8 @@
             <div class="box-element product">
                 <h6><strong>{{product.name}}</strong></h6>
                 <hr>
-                <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">Add to Cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
+                <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">{%trans "Add to Cart"%}</button>
+                <a class="btn btn-outline-success" href="#">{%trans "View"%}</a>
                 <h4 style="float: right">{{product.price|floatformat:2}}BGN</h4>
             </div>
         </div>

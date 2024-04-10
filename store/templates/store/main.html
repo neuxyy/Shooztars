@@ -1,5 +1,6 @@
 
 <!DOCTYPE html>
+{% load i18n %}
 {% load static %}
 <html>
 	<head>
@@ -30,33 +31,33 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="{% url 'store'%}">Store<span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="{% url 'store'%}">{%trans "Store"%}<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Language
+							{%trans "Language"%}
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<h6 class="dropdown-header">Choose Language</h6>
+							<h6 class="dropdown-header">{%trans "Choose language"%}</h6>
 							<div class="dropdown-divider"></div>
 							<div class="text-center">
-								<button class="dropdown-item btn btn-light" onclick="changeLanguage('BG')">BG</button>
-								<button class="dropdown-item btn btn-light" onclick="changeLanguage('EN')">EN</button>
+								<button class="dropdown-item btn btn-light" onclick="changeLanguage('BG')">{%trans "BG"%}</button>
+								<button class="dropdown-item btn btn-light" onclick="changeLanguage('EN')">{%trans "EN"%}</button>
 							</div>
 						</div>
 					</li>
 					{% if request.user.is_authenticated and request.user.is_staff %}
 					<li class="nav-item">
-						<a class="nav-link" href={% url 'admin:index' %}>Admin Page</a>
+						<a class="nav-link" href={% url 'admin:index' %}>{%trans "Admin Page"%}</a>
 					</li>
 					<li class="nav-item">
-						<button class="nav-link red-button" onclick="location.href='{% url 'add_product'%}'">Add Product</button>
+						<button class="nav-link red-button" onclick="location.href='{% url 'add_product'%}'">{%trans "Add product"%}</button>
 					</li>
 					{% endif %}
 				</ul>
 				<div class="form-inline my-2 my-lg-0">
 					<div class="input-group">
-						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+						<input class="form-control mr-sm-2" type="search" placeholder="{% trans 'Search' %}" aria-label="Search">
 						<div class="input-group-append">
 							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
 								<i class="fas fa-search"></i>
@@ -67,32 +68,32 @@
 				
 				<div class="dropdown">
 					<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Price Filter
+						{% trans 'Price Filter' %}
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 						<form class="px-4 py-3">
 							<div class="form-group">
-								<label for="minPrice">Min Price: <span id="minPriceValue"></span></label>
+								<label for="minPrice">{% trans 'Min Price: '%}<span id="minPriceValue"></span></label>
 								<input type="number" class="form-control" id="minPriceInput" min="0" max="20000" value="10000" oninput="document.getElementById('minPrice').value = this.value; document.getElementById('minPriceValue').textContent = this.value">
 								<input type="range" class="form-control-range" id="minPrice" min="0" max="20000" value="10000" oninput="document.getElementById('minPriceInput').value = this.value; document.getElementById('minPriceValue').textContent = this.value">
 							</div>
 							<div class="form-group">
-								<label for="maxPrice">Max Price: <span id="maxPriceValue"></span></label>
+								<label for="maxPrice">{% trans 'Max Price: '%}<span id="maxPriceValue"></span></label>
 								<input type="number" class="form-control" id="maxPriceInput" min="0" max="20000" value="15000" oninput="document.getElementById('maxPrice').value = this.value; document.getElementById('maxPriceValue').textContent = this.value">
 								<input type="range" class="form-control-range" id="maxPrice" min="0" max="20000" value="15000" oninput="document.getElementById('maxPriceInput').value = this.value; document.getElementById('maxPriceValue').textContent = this.value">
 							</div>
-							<button type="submit" class="btn btn-primary">Apply</button>
+							<button type="submit" class="btn btn-primary">{% trans 'Apply'%}</button>
 						</form>
 					</div>
 				</div>
 				
 				<div class="form-inline my-2 my-lg-0 ml-auto">
 					{% if user.is_authenticated %}
-						<span class="navbar-text"><strong style="color: white;">Hello, {{ user.first_name }}</strong></span>
-						<a href="{% url 'profile' %}" class="btn btn-danger" style="margin-left: 10px;">Profile</a>
-						<button onclick="location.href='{% url 'logout' %}'" class="btn btn-warning" style="margin-left: 10px;">Logout</button>
+						<span class="navbar-text"><strong style="color: white;">{% trans 'Hello, '%}{{ user.first_name }}</strong></span>
+						<a href="{% url 'profile' %}" class="btn btn-danger" style="margin-left: 10px;">{% trans 'Profile'%}</a>
+						<button onclick="location.href='{% url 'logout' %}'" class="btn btn-warning" style="margin-left: 10px;">{% trans 'Logout'%}</button>
 					{% else %}
-						<button onclick="location.href='{% url 'login' %}'" class="btn btn-warning">Login</button>
+						<button onclick="location.href='{% url 'login' %}'" class="btn btn-warning">{% trans 'Login'%}</button>
 					{% endif %}
 					<a href="{% url 'cart' %}">
 						<img id="cart-icon" src="{% static 'images/cart.png' %}">
@@ -120,6 +121,8 @@
 		<script type="text/javascript" src="{% static 'js/cart.js' %}"></script>
 		 
 		<script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+
+		<script type="text/javascript" src="{% static 'js/lang_change.js' %}"></script>
 		 
 		<script>
 			window.onload = function() {

@@ -34,8 +34,7 @@ def cookieCart(request):
             }
             items.append(item)
             
-            if product.digital == False:
-                order['shipping'] = True
+            order['shipping'] = True
         except:
             pass
     return{'cartItems':cartItems, 'order':order, 'items':items}

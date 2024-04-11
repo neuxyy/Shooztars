@@ -7,7 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 import json
 import datetime
 
-
+from decimal import Decimal
 from .forms import OrderForm, CreateUserForm, ProductForm
 from . utils import cartData, guestOrder
 from .models import *
@@ -60,19 +60,25 @@ def ProfilePage(request):
     
     return render(request, 'accounts/profile.html', context)
 
+def get_search_results(query):
+    if query:
+        return Product.objects.filter(name__icontains=query)
+    else:
+        return Product.objects.all()
+
+def get_filtered_results(min_price, max_price, queryset):
+    return queryset.filter(price__range=(min_price, max_price))
+
 def search_filter(request):
     data = cartData(request)
-    
     cartItems = data['cartItems']
     
     query = request.GET.get('q', '')
-    min_price = request.GET.get('min_price', 0)
-    max_price = request.GET.get('max_price', float('inf'))
+    min_price = Decimal(request.GET.get('min_price', '0'))
+    max_price = Decimal(request.GET.get('max_price', str(float(1000000))))
     
-    if query:
-        results = Product.objects.filter(name__icontains=query, price__range=(min_price, max_price))
-    else:
-        results = Product.objects.filter(price__range=(min_price, max_price))
+    search_results = get_search_results(query)
+    results = get_filtered_results(min_price, max_price, search_results)
         
     context = {'results': results, 'cartItems': cartItems}
     

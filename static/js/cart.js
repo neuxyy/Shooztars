@@ -43,7 +43,8 @@ function addCookieItem(productId, action){
 function updateUserOrder(productId, action) {
     console.log('User is logged in, sending data..')
 
-    var url = '/update_item/'
+    var currentLanguage = getLang('django_language') || 'en';
+    var url = '/' + currentLanguage + '/update_item/'
 
     fetch(url, {
         method: 'POST',
@@ -54,13 +55,27 @@ function updateUserOrder(productId, action) {
         body: JSON.stringify({'productId': productId, 'action': action})
     })
     
-    .then((respone) =>{
-        return respone.json()
+    .then((response) =>{
+        return response.json()
     })
 
     .then((data) =>{
         console.log('data:', data)
         location.reload()
     })
+
+    function getLang(name) {
+        var cookieArr = document.cookie.split(";");
+        
+        for(var i = 0; i < cookieArr.length; i++) {
+            var cookiePair = cookieArr[i].split("=");
+            
+            if(name == cookiePair[0].trim()) {
+                return decodeURIComponent(cookiePair[1]);
+            }
+        }
+        
+        return null;
+    }
 
 }

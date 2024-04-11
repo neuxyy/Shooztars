@@ -59,7 +59,7 @@ function openWindow(name, imageUrl, descriptionEN, descriptionBG) {
     content.appendChild(buttonElementEN);
     
     var descriptionElementEN = document.createElement('p');
-    descriptionElementEN.textContent = 'DescriptionEN: ' + descriptionEN;
+    descriptionElementEN.textContent = "⠀⠀" + descriptionEN;
     descriptionElementEN.id = 'descriptionTextEN';
     descriptionElementEN.style.display = 'none';
     content.appendChild(descriptionElementEN);
@@ -68,6 +68,7 @@ function openWindow(name, imageUrl, descriptionEN, descriptionBG) {
     buttonElementBG.textContent = '🇧🇬  ';
     buttonElementBG.id = 'buttonBG';
     buttonElementBG.style.outline = 'none';
+
     buttonElementBG.addEventListener('click', function() {
         var descriptionTextBG = document.getElementById('descriptionTextBG');
         descriptionTextBG.style.display = descriptionTextBG.style.display === 'block' ? 'none' : 'block';
@@ -75,7 +76,7 @@ function openWindow(name, imageUrl, descriptionEN, descriptionBG) {
     content.appendChild(buttonElementBG);
     
     var descriptionElementBG = document.createElement('p');
-    descriptionElementBG.textContent = 'DescriptionBG: ' + descriptionBG;
+    descriptionElementBG.textContent = "⠀⠀" + descriptionBG;
     descriptionElementBG.id = 'descriptionTextBG';
     descriptionElementBG.style.display = 'none';
     content.appendChild(descriptionElementBG);
@@ -90,6 +91,7 @@ function openWindow(name, imageUrl, descriptionEN, descriptionBG) {
     closeButton.style.fontSize = '20px';    
     closeButton.style.cursor = 'pointer';
     closeButton.style.outline = '0';
+
     closeButton.addEventListener('click', function(event) {
         event.stopPropagation();
         document.body.removeChild(overlay);

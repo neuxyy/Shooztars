@@ -78,3 +78,19 @@ def guestOrder(request, data):
 			quantity=item['quantity'],
 		)
 	return customer, order
+
+def get_search_results(query):
+    if query:
+        return Product.objects.filter(name__icontains=query)
+    else:
+        return Product.objects.all()
+
+def get_filtered_results(min_price=None, max_price=None, queryset=None):
+    if min_price is not None and max_price is not None:
+        return queryset.filter(price__range=(min_price, max_price))
+    elif min_price is not None:
+        return queryset.filter(price__gte=min_price)
+    elif max_price is not None:
+        return queryset.filter(price__lte=max_price)
+    else:
+        return queryset

@@ -9,7 +9,7 @@ import datetime
 
 from decimal import Decimal
 from .forms import OrderForm, CreateUserForm, ProductForm
-from . utils import cartData, guestOrder
+from . utils import cartData, guestOrder, get_search_results, get_filtered_results
 from .models import *
 
 def RegisterPage(request):
@@ -60,21 +60,6 @@ def ProfilePage(request):
     
     return render(request, 'accounts/profile.html', context)
 
-def get_search_results(query):
-    if query:
-        return Product.objects.filter(name__icontains=query)
-    else:
-        return Product.objects.all()
-
-def get_filtered_results(min_price=None, max_price=None, queryset=None):
-    if min_price is not None and max_price is not None:
-        return queryset.filter(price__range=(min_price, max_price))
-    elif min_price is not None:
-        return queryset.filter(price__gte=min_price)
-    elif max_price is not None:
-        return queryset.filter(price__lte=max_price)
-    else:
-        return queryset
 
 def search_filter(request):
     data = cartData(request)

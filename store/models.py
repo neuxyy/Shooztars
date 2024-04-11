@@ -12,7 +12,8 @@ class Customer(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=12, decimal_places=2)
-    description = models.TextField(null=True, blank=True)
+    descriptionEN = models.TextField(null=True, blank=True)
+    descriptionBG = models.TextField(null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     
     def __str__(self):

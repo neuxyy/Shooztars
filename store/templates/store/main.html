@@ -41,8 +41,11 @@
 							<h6 class="dropdown-header">{%trans "Choose language"%}</h6>
 							<div class="dropdown-divider"></div>
 							<div class="text-center">
-								<button class="dropdown-item btn btn-light" onclick="changeLanguage('BG')">{%trans "BG"%}</button>
-								<button class="dropdown-item btn btn-light" onclick="changeLanguage('EN')">{%trans "EN"%}</button>
+								<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+									<input name="next" type="hidden" value="{{ request.path }}">
+									<button name="language" type="submit" value="bg" class="btn btn-primary btn-lg" style="font-size: 42px; background-color: #1AD7ED; border-color: #1AD7ED;">🇧🇬</button>
+									<button name="language" type="submit" value="en" class="btn btn-primary btn-lg" style="font-size: 42px; background-color: #1AD7ED; border-color: #1AD7ED;">🇬🇧</button>
+								</form>
 							</div>
 						</div>
 					</li>
@@ -55,15 +58,18 @@
 					</li>
 					{% endif %}
 				</ul>
+
 				<div class="form-inline my-2 my-lg-0">
-					<div class="input-group">
-						<input class="form-control mr-sm-2" type="search" placeholder="{% trans 'Search' %}" aria-label="Search">
-						<div class="input-group-append">
-							<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-								<i class="fas fa-search"></i>
-							</button>
+					<form method="GET" action="{% url 'search' %}">
+						<div class="input-group">
+							<input class="form-control mr-sm-2" type="search" name="q" placeholder="{% trans 'Search' %}" aria-label="Search">
+							<div class="input-group-append">
+								<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+									<i class="fas fa-search"></i>
+								</button>
+							</div>
 						</div>
-					</div>
+					</form>
 				</div>
 				
 				<div class="dropdown">
@@ -71,32 +77,32 @@
 						{% trans 'Price Filter' %}
 					</button>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-						<form class="px-4 py-3">
+
+						<form class="px-4 py-3" method="GET" action="{% url 'search' %}">
 							<div class="form-group">
-								<label for="minPrice">{% trans 'Min Price: '%}<span id="minPriceValue"></span></label>
-								<input type="number" class="form-control" id="minPriceInput" min="0" max="20000" value="10000" oninput="document.getElementById('minPrice').value = this.value; document.getElementById('minPriceValue').textContent = this.value">
-								<input type="range" class="form-control-range" id="minPrice" min="0" max="20000" value="10000" oninput="document.getElementById('minPriceInput').value = this.value; document.getElementById('minPriceValue').textContent = this.value">
+								<label for="minPrice">{% trans 'Min Price: '%}</label>
+								<input type="number" class="form-control" id="minPriceInput" name="min_price" min="0">
 							</div>
 							<div class="form-group">
-								<label for="maxPrice">{% trans 'Max Price: '%}<span id="maxPriceValue"></span></label>
-								<input type="number" class="form-control" id="maxPriceInput" min="0" max="20000" value="15000" oninput="document.getElementById('maxPrice').value = this.value; document.getElementById('maxPriceValue').textContent = this.value">
-								<input type="range" class="form-control-range" id="maxPrice" min="0" max="20000" value="15000" oninput="document.getElementById('maxPriceInput').value = this.value; document.getElementById('maxPriceValue').textContent = this.value">
+								<label for="maxPrice">{% trans 'Max Price: '%}</label>
+								<input type="number" class="form-control" id="maxPriceInput" name="max_price" min="0">
 							</div>
 							<button type="submit" class="btn btn-primary">{% trans 'Apply'%}</button>
 						</form>
+
 					</div>
 				</div>
 				
 				<div class="form-inline my-2 my-lg-0 ml-auto">
 					{% if user.is_authenticated %}
-						<span class="navbar-text"><strong style="color: white;">{% trans 'Hello, '%}{{ user.first_name }}</strong></span>
+						<span class="navbar-text"><strong style="color: white;">{% trans 'Welcome, '%}{{ user.first_name }} !</strong></span>
 						<a href="{% url 'profile' %}" class="btn btn-danger" style="margin-left: 10px;">{% trans 'Profile'%}</a>
 						<button onclick="location.href='{% url 'logout' %}'" class="btn btn-warning" style="margin-left: 10px;">{% trans 'Logout'%}</button>
 					{% else %}
 						<button onclick="location.href='{% url 'login' %}'" class="btn btn-warning">{% trans 'Login'%}</button>
 					{% endif %}
 					<a href="{% url 'cart' %}">
-						<img id="cart-icon" src="{% static 'images/cart.png' %}">
+						<img id="cart-icon" src="{% static 'images/cart.png' %}">	
 					</a>
 					<p id="cart-total">{{cartItems}}</p>
 				</div>
@@ -131,4 +137,17 @@
 			}
 		</script>
 	</body>
+		{% block footer %}
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<p class="text-center">
+							&copy; {% now "Y" %} Shooztars. All rights reserved.
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		{% endblock footer %}
 </html>

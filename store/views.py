@@ -60,13 +60,32 @@ def ProfilePage(request):
     
     return render(request, 'accounts/profile.html', context)
 
+def search_filter(request):
+    data = cartData(request)
+    
+    cartItems = data['cartItems']
+    
+    query = request.GET.get('q', '')
+    min_price = request.GET.get('min_price', 0)
+    max_price = request.GET.get('max_price', float('inf'))
+    
+    if query:
+        results = Product.objects.filter(name__icontains=query, price__range=(min_price, max_price))
+    else:
+        results = Product.objects.filter(price__range=(min_price, max_price))
+        
+    context = {'results': results, 'cartItems': cartItems}
+    
+    return render(request, 'store/search.html', context)
+
 def store(request):
     data = cartData(request)
     
     cartItems = data['cartItems']
     
-    products = Product.objects.all()
-    context = {'products': products, 'cartItems': cartItems}
+    results = Product.objects.all()
+    context = {'results': results, 'cartItems': cartItems}
+    
     return render(request, 'store/store.html', context)
 
 def cart(request):

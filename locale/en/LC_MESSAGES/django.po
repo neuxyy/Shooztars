@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-10 23:29+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\Shooztars\settings.py:114
+msgid "English"
+msgstr "English"
+
+#: .\Shooztars\settings.py:115
+msgid "Bulgarian"
+msgstr "Bulgarian"
+
+#: .\store\templates\accounts\login.html:7
+#: .\store\templates\accounts\login.html:44
+#: .\store\templates\accounts\register.html:7
+#: .\store\templates\accounts\register.html:73
+#: .\store\templates\store\main.html:96
+msgid "Login"
+msgstr "Login"
+
+#: .\store\templates\accounts\login.html:21
+#: .\store\templates\store\main.html:44
+msgid "BG"
+msgstr "BG"
+
+#: .\store\templates\accounts\login.html:22
+#: .\store\templates\store\main.html:45
+msgid "EN"
+msgstr "EN"
+
+#: .\store\templates\accounts\login.html:25
+msgid "LOGIN"
+msgstr "LOGIN"
+
+#: .\store\templates\accounts\login.html:35
+msgid "Username ..."
+msgstr "Username ..."
+
+#: .\store\templates\accounts\login.html:41
+msgid "Password ..."
+msgstr "Password ..."
+
+#: .\store\templates\accounts\login.html:55
+msgid "Don't have an account?"
+msgstr "Don't have an account?"
+
+#: .\store\templates\accounts\login.html:55
+msgid "Sign Up"
+msgstr "Sign Up"
+
+#: .\store\templates\accounts\profile.html:6
+#: .\store\templates\store\main.html:92
+msgid "Welcome, "
+msgstr "Welcome, "
+
+#: .\store\templates\accounts\profile.html:7
+msgid "First name:"
+msgstr "First name:"
+
+#: .\store\templates\accounts\profile.html:8
+msgid "Last name:"
+msgstr "Last name:"
+
+#: .\store\templates\accounts\profile.html:9
+msgid "Email:"
+msgstr "Email:"
+
+#: .\store\templates\accounts\profile.html:10
+msgid "Staff status:"
+msgstr "Staff status:"
+
+#: .\store\templates\accounts\profile.html:11
+msgid "Date joined:"
+msgstr "Date joined:"
+
+#: .\store\templates\accounts\register.html:21
+#: .\store\templates\accounts\register.html:64
+msgid "Register Account"
+msgstr "Register Account"
+
+#: .\store\templates\accounts\register.html:73
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+#: .\store\templates\accounts\register.html:81
+msgid "Username.."
+msgstr "Username.."
+
+#: .\store\templates\accounts\register.html:82
+msgid "First Name.."
+msgstr "First Name.."
+
+#: .\store\templates\accounts\register.html:83
+msgid "Last Name.."
+msgstr "Last Name.."
+
+#: .\store\templates\accounts\register.html:84
+msgid "Email.."
+msgstr "Email.."
+
+#: .\store\templates\accounts\register.html:85
+msgid "Enter password..."
+msgstr "Enter password..."
+
+#: .\store\templates\accounts\register.html:86
+msgid "Re-enter Password..."
+msgstr "Re-enter Password..."
+
+#: .\store\templates\store\add_product.html:5
+#: .\store\templates\store\add_product.html:9
+msgid "Add Product"
+msgstr "Add Product"
+
+#: .\store\templates\store\cart.html:8
+msgid "Continue shopping"
+msgstr "Continue shopping"
+
+#: .\store\templates\store\cart.html:15
+#: .\store\templates\store\checkout.html:74
+msgid "Items: "
+msgstr "Items: "
+
+#: .\store\templates\store\cart.html:16
+#: .\store\templates\store\checkout.html:75
+msgid "Total: "
+msgstr "Total: "
+
+#: .\store\templates\store\cart.html:18
+msgid "Checkout"
+msgstr "Checkout"
+
+#: .\store\templates\store\cart.html:30
+msgid "Item"
+msgstr "Item"
+
+#: .\store\templates\store\cart.html:31
+msgid "Price"
+msgstr "Price"
+
+#: .\store\templates\store\cart.html:32
+msgid "Quantity"
+msgstr "Quantity"
+
+#: .\store\templates\store\cart.html:33
+msgid "Total"
+msgstr "Total"
+
+#: .\store\templates\store\checkout.html:12
+msgid "Name"
+msgstr "Name"
+
+#: .\store\templates\store\checkout.html:15
+msgid "Email"
+msgstr "Email"
+
+#: .\store\templates\store\checkout.html:21
+msgid "Shipping Information:"
+msgstr "Shipping Information:"
+
+#: .\store\templates\store\checkout.html:25
+#: .\store\templates\store\checkout.html:27
+msgid "Address"
+msgstr "Address"
+
+#: .\store\templates\store\checkout.html:31
+#: .\store\templates\store\checkout.html:33
+msgid "City"
+msgstr "City"
+
+#: .\store\templates\store\checkout.html:37
+msgid "Zip Code"
+msgstr "Zip Code"
+
+#: .\store\templates\store\checkout.html:43
+#: .\store\templates\store\checkout.html:45
+msgid "Country"
+msgstr "Country"
+
+#: .\store\templates\store\checkout.html:50
+msgid "Continue"
+msgstr "Continue"
+
+#: .\store\templates\store\checkout.html:55
+msgid "Payment Options"
+msgstr "Payment Options"
+
+#: .\store\templates\store\checkout.html:62
+msgid "Back to cart"
+msgstr "Back to cart"
+
+#: .\store\templates\store\checkout.html:64
+msgid "Order Summary"
+msgstr "Order Summary"
+
+#: .\store\templates\store\main.html:34
+msgid "Store"
+msgstr "Store"
+
+#: .\store\templates\store\main.html:38
+msgid "Language"
+msgstr "Language"
+
+#: .\store\templates\store\main.html:41
+msgid "Choose language"
+msgstr "Choose language"
+
+#: .\store\templates\store\main.html:51
+msgid "Admin Page"
+msgstr "Admin Page"
+
+#: .\store\templates\store\main.html:54
+msgid "Add product"
+msgstr "Add product"
+
+#: .\store\templates\store\main.html:60
+msgid "Search"
+msgstr "Search"
+
+#: .\store\templates\store\main.html:71
+msgid "Price Filter"
+msgstr "Price Filter"
+
+#: .\store\templates\store\main.html:76
+msgid "Min Price: "
+msgstr "Min Price: "
+
+#: .\store\templates\store\main.html:81
+msgid "Max Price: "
+msgstr "Max Price: "
+
+#: .\store\templates\store\main.html:85
+msgid "Apply"
+msgstr "Apply"
+
+#: .\store\templates\store\main.html:93
+msgid "Profile"
+msgstr "Profile"
+
+#: .\store\templates\store\main.html:94
+msgid "Logout"
+msgstr "Logout"
+
+#: .\store\templates\store\store.html:12
+msgid "Add to Cart"
+msgstr "Add to Cart"
+
+#: .\store\templates\store\store.html:13
+msgid "View"
+msgstr "View"
+
+#: .\store\templates\store\search.html:22
+msgid "No results found"
+msgstr "No results found"

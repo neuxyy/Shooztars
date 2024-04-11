@@ -14,6 +14,7 @@ urlpatterns = [
     path('logout/', views.LogoutPage, name='logout'),
     path('add_product/', views.AddProduct, name='add_product'),
     path('profile/', views.ProfilePage, name = "profile"),
+    path('search/', views.search_filter, name='search'),
     
     
     

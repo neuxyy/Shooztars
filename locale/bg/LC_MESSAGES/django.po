@@ -1,0 +1,268 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-04-10 23:29+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: .\Shooztars\settings.py:114
+msgid "English"
+msgstr "Английски"
+
+#: .\Shooztars\settings.py:115
+msgid "Bulgarian"
+msgstr "Български"
+
+#: .\store\templates\accounts\login.html:7
+#: .\store\templates\accounts\login.html:44
+#: .\store\templates\accounts\register.html:7
+#: .\store\templates\accounts\register.html:73
+#: .\store\templates\store\main.html:96
+msgid "Login"
+msgstr "Вход"
+
+#: .\store\templates\accounts\login.html:21
+#: .\store\templates\store\main.html:44
+msgid "BG"
+msgstr "BG"
+
+#: .\store\templates\accounts\login.html:22
+#: .\store\templates\store\main.html:45
+msgid "EN"
+msgstr "EN"
+
+#: .\store\templates\accounts\login.html:25
+msgid "LOGIN"
+msgstr "Вход"
+
+#: .\store\templates\accounts\login.html:35
+msgid "Username ..."
+msgstr "Потребителско име..."
+
+#: .\store\templates\accounts\login.html:41
+msgid "Password ..."
+msgstr "Парола..."
+
+#: .\store\templates\accounts\login.html:55
+msgid "Don't have an account?"
+msgstr "Нямате акаунт?"
+
+#: .\store\templates\accounts\login.html:55
+msgid "Sign Up"
+msgstr "Регистрация!"
+
+#: .\store\templates\accounts\profile.html:6
+#: .\store\templates\store\main.html:92
+msgid "Welcome, "
+msgstr "Добре дошли, "
+
+#: .\store\templates\accounts\profile.html:7
+msgid "First name:"
+msgstr "Име:"
+
+#: .\store\templates\accounts\profile.html:8
+msgid "Last name:"
+msgstr "Фамилия:"
+
+#: .\store\templates\accounts\profile.html:9
+msgid "Email:"
+msgstr "E-mail"
+
+#: .\store\templates\accounts\profile.html:10
+msgid "Staff status:"
+msgstr "Служебен статус"
+
+#: .\store\templates\accounts\profile.html:11
+msgid "Date joined:"
+msgstr "Дата на регистрация"
+
+#: .\store\templates\accounts\register.html:21
+#: .\store\templates\accounts\register.html:64
+msgid "Register Account"
+msgstr "Регистрация"
+
+#: .\store\templates\accounts\register.html:73
+msgid "Already have an account?"
+msgstr "Вече имате акаунт?"
+
+#: .\store\templates\accounts\register.html:81
+msgid "Username.."
+msgstr "Потребителско име.."
+
+#: .\store\templates\accounts\register.html:82
+msgid "First Name.."
+msgstr "Име.."
+
+#: .\store\templates\accounts\register.html:83
+msgid "Last Name.."
+msgstr "Фамилия"
+
+#: .\store\templates\accounts\register.html:84
+msgid "Email.."
+msgstr "E-mail.."
+
+#: .\store\templates\accounts\register.html:85
+msgid "Enter password..."
+msgstr "Добавете парола..."
+
+#: .\store\templates\accounts\register.html:86
+msgid "Re-enter Password..."
+msgstr "Напишете паролата отново..."
+
+#: .\store\templates\store\add_product.html:5
+#: .\store\templates\store\add_product.html:9
+msgid "Add Product"
+msgstr "Добави продукт"
+
+#: .\store\templates\store\cart.html:8
+msgid "Continue shopping"
+msgstr "Продължете пазаруването"
+
+#: .\store\templates\store\cart.html:15
+#: .\store\templates\store\checkout.html:74
+msgid "Items: "
+msgstr "Брой продукта: "
+
+#: .\store\templates\store\cart.html:16
+#: .\store\templates\store\checkout.html:75
+msgid "Total: "
+msgstr "Обща цена: "
+
+#: .\store\templates\store\cart.html:18
+msgid "Checkout"
+msgstr "Плащане"
+
+#: .\store\templates\store\cart.html:30
+msgid "Item"
+msgstr "Продукт"
+
+#: .\store\templates\store\cart.html:31
+msgid "Price"
+msgstr "Цена"
+
+#: .\store\templates\store\cart.html:32
+msgid "Quantity"
+msgstr "Количество"
+
+#: .\store\templates\store\cart.html:33
+msgid "Total"
+msgstr "Крайна цена"
+
+#: .\store\templates\store\checkout.html:12
+msgid "Name"
+msgstr "Име"
+
+#: .\store\templates\store\checkout.html:15
+msgid "Email"
+msgstr "E-mail"
+
+#: .\store\templates\store\checkout.html:21
+msgid "Shipping Information:"
+msgstr "Информация за доставка:"
+
+#: .\store\templates\store\checkout.html:25
+#: .\store\templates\store\checkout.html:27
+msgid "Address"
+msgstr "Адрес"
+
+#: .\store\templates\store\checkout.html:31
+#: .\store\templates\store\checkout.html:33
+msgid "City"
+msgstr "Град"
+
+#: .\store\templates\store\checkout.html:37
+msgid "Zip Code"
+msgstr "ZIP код"
+
+#: .\store\templates\store\checkout.html:43
+#: .\store\templates\store\checkout.html:45
+msgid "Country"
+msgstr "Държава"
+
+#: .\store\templates\store\checkout.html:50
+msgid "Continue"
+msgstr "Продължете"
+
+#: .\store\templates\store\checkout.html:55
+msgid "Payment Options"
+msgstr "Начин на плащане"
+
+#: .\store\templates\store\checkout.html:62
+msgid "Back to cart"
+msgstr "Обратно към количката"
+
+#: .\store\templates\store\checkout.html:64
+msgid "Order Summary"
+msgstr "Изглед на поръчката"
+
+#: .\store\templates\store\main.html:34
+msgid "Store"
+msgstr "Каталог"
+
+#: .\store\templates\store\main.html:38
+msgid "Language"
+msgstr "Език"
+
+#: .\store\templates\store\main.html:41
+msgid "Choose language"
+msgstr "Изберете език"
+
+#: .\store\templates\store\main.html:51
+msgid "Admin Page"
+msgstr "Административна страница"
+
+#: .\store\templates\store\main.html:54
+msgid "Add product"
+msgstr "Добави продукт"
+
+#: .\store\templates\store\main.html:60
+msgid "Search"
+msgstr "Търсене"
+
+#: .\store\templates\store\main.html:71
+msgid "Price Filter"
+msgstr "Филтър на цена"
+
+#: .\store\templates\store\main.html:76
+msgid "Min Price: "
+msgstr "От: "
+
+#: .\store\templates\store\main.html:81
+msgid "Max Price: "
+msgstr "До: "
+
+#: .\store\templates\store\main.html:85
+msgid "Apply"
+msgstr "Търси"
+
+#: .\store\templates\store\main.html:93
+msgid "Profile"
+msgstr "Профил"
+
+#: .\store\templates\store\main.html:94
+msgid "Logout"
+msgstr "Изход"
+
+#: .\store\templates\store\store.html:12
+msgid "Add to Cart"
+msgstr "Добави в "
+
+#: .\store\templates\store\store.html:13
+msgid "View"
+msgstr "Изглед"
+
+#: .\store\templates\store\search.html:22
+msgid "No results found"
+msgstr "Няма намерени резултати"

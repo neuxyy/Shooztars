@@ -2,18 +2,23 @@
 {% load i18n %}
 {% load static %}
 {% block content%}
-    <div class="row">
-        {% for product in products%}
-        <div class="col-lg-4">
-            <img class="thumbnail" src="{{product.imageURL}}">
-            <div class="box-element product">
-                <h6><strong>{{product.name}}</strong></h6>
-                <hr>
-                <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">{%trans "Add to Cart"%}</button>
-                <a class="btn btn-outline-success" href="#">{%trans "View"%}</a>
-                <h4 style="float: right">{{product.price|floatformat:2}}BGN</h4>
+    <body>
+        <div class="row">
+
+            {% for product in results %}
+            <div class="col-lg-4">
+                <img class="thumbnail" src="{{product.imageURL}}">
+                <div class="box-element product">
+                    <h6><strong>{{product.name}}</strong></h6>
+                    <hr>
+                    <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">{%trans "Add to Cart"%} 🛒</button>
+                    <button type="button" class="btn btn-outline-success" onclick="openWindow('{{product.name}}', '{{product.imageURL}}', '{{product.descriptionEN}}','{{product.descriptionBG}}')">{%trans "View"%}</button>
+                    <h4 style="float: right">{{product.price|floatformat:2}}BGN</h4>
+                </div>
             </div>
+            {% endfor %}
+
         </div>
-        {% endfor %}
-    </div>
+        <script type="text/javascript" src="{% static 'js/view_button.js' %}"></script>
+    </body>
 {% endblock content %}

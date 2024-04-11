@@ -66,16 +66,26 @@ def get_search_results(query):
     else:
         return Product.objects.all()
 
-def get_filtered_results(min_price, max_price, queryset):
-    return queryset.filter(price__range=(min_price, max_price))
+def get_filtered_results(min_price=None, max_price=None, queryset=None):
+    if min_price is not None and max_price is not None:
+        return queryset.filter(price__range=(min_price, max_price))
+    elif min_price is not None:
+        return queryset.filter(price__gte=min_price)
+    elif max_price is not None:
+        return queryset.filter(price__lte=max_price)
+    else:
+        return queryset
 
 def search_filter(request):
     data = cartData(request)
     cartItems = data['cartItems']
     
     query = request.GET.get('q', '')
-    min_price = Decimal(request.GET.get('min_price', '0'))
-    max_price = Decimal(request.GET.get('max_price', str(float(1000000))))
+    min_price = request.GET.get('min_price')
+    max_price = request.GET.get('max_price')
+    
+    min_price = Decimal(min_price) if min_price else None
+    max_price = Decimal(max_price) if max_price else None
     
     search_results = get_search_results(query)
     results = get_filtered_results(min_price, max_price, search_results)

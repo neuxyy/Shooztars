@@ -1,8 +1,9 @@
-from django.urls import path
-from django.urls import re_path
-from django.views.generic import RedirectView
 from django.contrib.auth import views as auth_views
-from.import views
+from django.urls import path, re_path
+from django.views.generic import RedirectView
+
+from . import views
+from .views import CustomPasswordResetView
 
 urlpatterns = [
     path('', views.store, name = "store"),
@@ -19,7 +20,7 @@ urlpatterns = [
     
     
     path('reset_password/',
-        auth_views.PasswordResetView.as_view(template_name = 'accounts/password_reset.html'), 
+        CustomPasswordResetView.as_view(template_name = 'accounts/password_reset.html'), 
         name='password_reset'),
     
     path('reset_password_sent/', 

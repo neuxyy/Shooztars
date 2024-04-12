@@ -1,16 +1,19 @@
-from django.shortcuts import render, redirect
-from django.http import JsonResponse
-from django.contrib.auth.forms import UserCreationForm
+import datetime
+import json
+from decimal import Decimal
+
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+from django.contrib.auth.views import PasswordResetView
+from django.core.exceptions import ValidationError
+from django.http import JsonResponse
+from django.shortcuts import render, redirect
 
-import json
-import datetime
-
-from decimal import Decimal
 from .forms import OrderForm, CreateUserForm, ProductForm
-from . utils import cartData, guestOrder, get_search_results, get_filtered_results
 from .models import *
+from .utils import cartData, guestOrder, get_search_results, get_filtered_results
 
 def RegisterPage(request):
     form = CreateUserForm()

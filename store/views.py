@@ -51,8 +51,6 @@ def LogoutPage(request):
     return redirect('store')
 
 def ProfilePage(request):
-    #Profile page
-    #Add CRUD for name,username etc.
     data = cartData(request)
     
     cartItems = data['cartItems']

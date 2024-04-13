@@ -124,3 +124,21 @@ h1,h2,h3,h4,h5,h6{
     width: 10%;
     height: auto;
 }
+
+
+@media (max-width: 768px) {
+	.grid-container {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+.box-element.product {
+	width: 100%;
+	height: auto;
+}
+
+.grid-container-2 {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: 15fr 5fr 10fr;
+}

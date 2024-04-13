@@ -3,26 +3,28 @@
 {% load static %}
 {% block content%}
     <body>
-        
-        <div class="row">
+
+        <div class="grid-container" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
             {% for product in results %}
-            <div class="col-lg-4">
+            <div class="grid-item">
                 <img class="thumbnail" src="{{product.imageURL}}">
                 <div class="box-element product">
                     <h6><strong>{{product.name}}</strong></h6>
                     <hr>
-                    <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">{%trans "Add to Cart"%} 🛒</button>
-                    <button type="button" class="btn btn-outline-success" onclick="openWindow('{{product.name}}', '{{product.imageURL}}', '{{product.descriptionEN}}','{{product.descriptionBG}}')">{%trans "View"%}</button>
-                    <h4 style="float: right">{{product.price|floatformat:2}}BGN</h4>
+                    <div class="grid-container-2">
+                        <button data-product={{product.id}} data-action="add" class="btn btn-outline-secondary add-btn update-cart">{%trans "Add to Cart"%} 🛒</button>
+                        <button type="button" class="btn btn-outline-success" onclick="openWindow('{{product.name}}', '{{product.imageURL}}', '{{product.descriptionEN}}','{{product.descriptionBG}}')">{%trans "View"%}</button>
+                        <h4>{{product.price|floatformat:2}}BGN</h4>
+                    </div>
                 </div>
                 {% if request.user.is_staff %}
-                <form method="POST" action="{% url 'delete_product' product.id %}" onsubmit="return confirm('{% trans 'Are you sure you want to delete this product?' %}');">
+                <form method="POST" action="{% url 'delete_product' product.id %}">
                     {% csrf_token %}
                     <button class="btn full-width-btn" type="submit">
                         <img src="{% static 'images/garbage_bin.png' %}" alt="Remove product">
                     </button>
                 </form>
-            {% endif %}
+                {% endif %}
             </div>
             {% endfor %}
         </div>

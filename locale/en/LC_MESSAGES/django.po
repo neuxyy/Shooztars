@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-10 23:29+0300\n"
+"POT-Creation-Date: 2024-04-13 18:50+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,76 +17,151 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\Shooztars\settings.py:114
+#: .\Shooztars\settings.py:115
 msgid "English"
 msgstr "English"
 
-#: .\Shooztars\settings.py:115
+#: .\Shooztars\settings.py:116
 msgid "Bulgarian"
 msgstr "Bulgarian"
 
 #: .\store\templates\accounts\login.html:7
-#: .\store\templates\accounts\login.html:44
-#: .\store\templates\accounts\register.html:7
-#: .\store\templates\accounts\register.html:73
-#: .\store\templates\store\main.html:96
+#: .\store\templates\accounts\login.html:40
+#: .\store\templates\store\main.html:103
 msgid "Login"
-msgstr "Login"
+msgstr "Log in"
 
 #: .\store\templates\accounts\login.html:21
-#: .\store\templates\store\main.html:44
-msgid "BG"
-msgstr "BG"
-
-#: .\store\templates\accounts\login.html:22
-#: .\store\templates\store\main.html:45
-msgid "EN"
-msgstr "EN"
-
-#: .\store\templates\accounts\login.html:25
 msgid "LOGIN"
-msgstr "LOGIN"
+msgstr "LOG IN"
 
-#: .\store\templates\accounts\login.html:35
+#: .\store\templates\accounts\login.html:31
 msgid "Username ..."
-msgstr "Username ..."
+msgstr "Username"
 
-#: .\store\templates\accounts\login.html:41
+#: .\store\templates\accounts\login.html:37
 msgid "Password ..."
-msgstr "Password ..."
+msgstr "Password"
 
-#: .\store\templates\accounts\login.html:55
+#: .\store\templates\accounts\login.html:51
 msgid "Don't have an account?"
 msgstr "Don't have an account?"
 
-#: .\store\templates\accounts\login.html:55
+#: .\store\templates\accounts\login.html:51
 msgid "Sign Up"
 msgstr "Sign Up"
 
-#: .\store\templates\accounts\profile.html:6
-#: .\store\templates\store\main.html:92
+#: .\store\templates\accounts\login.html:57
+msgid "Forgot password?"
+msgstr "Forgot password?"
+
+#: .\store\templates\accounts\login.html:57
+msgid "Reset password"
+msgstr "Reset password"
+
+#: .\store\templates\accounts\password_reset.html:7
+#: .\store\templates\accounts\password_reset.html:23
+#: .\store\templates\accounts\password_reset_form.html:6
+msgid "Password Reset"
+msgstr "Password Reset"
+
+#: .\store\templates\accounts\password_reset.html:26
+msgid "Forgot your password?"
+msgstr "Forgot your password?"
+
+#: .\store\templates\accounts\password_reset.html:27
+msgid "Enter email address and a link will be sent shortly after!"
+msgstr "Enter email address and a link will be sent shortly after!"
+
+#: .\store\templates\accounts\password_reset.html:36
+msgid "Submit"
+msgstr "Submit"
+
+#: .\store\templates\accounts\password_reset_complete.html:6
+msgid "Password Reset Complete"
+msgstr "Password Reset Complete"
+
+#: .\store\templates\accounts\password_reset_complete.html:17
+msgid "Password reset complete"
+msgstr "Password reset complete"
+
+#: .\store\templates\accounts\password_reset_complete.html:20
+msgid "Your password has been successfully changed."
+msgstr "Your password has been successfully changed."
+
+#: .\store\templates\accounts\password_reset_complete.html:21
+msgid "You can now log in with your new password."
+msgstr "You can now log in with your new password."
+
+#: .\store\templates\accounts\password_reset_complete.html:24
+#: .\store\templates\accounts\register.html:73
+msgid "Log in"
+msgstr "Log in"
+
+#: .\store\templates\accounts\password_reset_form.html:15
+msgid "Enter new password"
+msgstr "Enter new password"
+
+#: .\store\templates\accounts\password_reset_form.html:17
+msgid "Enter your new password"
+msgstr "Enter your new password"
+
+#: .\store\templates\accounts\password_reset_form.html:25
+msgid "New Password"
+msgstr "New Password"
+
+#: .\store\templates\accounts\password_reset_form.html:31
+msgid "Confirm New Password"
+msgstr "Confirm New Password"
+
+#: .\store\templates\accounts\password_reset_form.html:34
+#: .\store\templates\accounts\profile.html:20
+msgid "Reset Password"
+msgstr "Reset Password"
+
+#: .\store\templates\accounts\password_reset_sent.html:14
+msgid "PASSWORD RESET EMAIL SENT"
+msgstr "PASSWORD RESET EMAIL SENT"
+
+#: .\store\templates\accounts\password_reset_sent.html:15
+msgid "An email has been sent with instructions to reset your password."
+msgstr "An email has been sent with instructions to reset your password."
+
+#: .\store\templates\accounts\password_reset_sent.html:16
+msgid ""
+"If you do not receive an email, please make sure you have entered the "
+"correct email address and try again."
+msgstr "If you do not receive an email, please make sure you have entered the "
+"correct email address and try again."
+
+#: .\store\templates\accounts\profile.html:9
+#: .\store\templates\store\main.html:99
 msgid "Welcome, "
 msgstr "Welcome, "
 
-#: .\store\templates\accounts\profile.html:7
+#: .\store\templates\accounts\profile.html:10
 msgid "First name:"
 msgstr "First name:"
 
-#: .\store\templates\accounts\profile.html:8
+#: .\store\templates\accounts\profile.html:11
 msgid "Last name:"
 msgstr "Last name:"
 
-#: .\store\templates\accounts\profile.html:9
+#: .\store\templates\accounts\profile.html:12
 msgid "Email:"
 msgstr "Email:"
 
-#: .\store\templates\accounts\profile.html:10
-msgid "Staff status:"
-msgstr "Staff status:"
+#: .\store\templates\accounts\profile.html:15
+msgid "Staff status: "
+msgstr "Staff status: "
 
-#: .\store\templates\accounts\profile.html:11
-msgid "Date joined:"
-msgstr "Date joined:"
+#: .\store\templates\accounts\profile.html:18
+msgid "Date joined: "
+msgstr "Date joined: "
+
+#: .\store\templates\accounts\register.html:7
+msgid "Register"
+msgstr "Register"
 
 #: .\store\templates\accounts\register.html:21
 #: .\store\templates\accounts\register.html:64
@@ -115,11 +190,11 @@ msgstr "Email.."
 
 #: .\store\templates\accounts\register.html:85
 msgid "Enter password..."
-msgstr "Enter password..."
+msgstr "Enter password.."
 
 #: .\store\templates\accounts\register.html:86
 msgid "Re-enter Password..."
-msgstr "Re-enter Password..."
+msgstr "Re-enter Password.."
 
 #: .\store\templates\store\add_product.html:5
 #: .\store\templates\store\add_product.html:9
@@ -131,12 +206,12 @@ msgid "Continue shopping"
 msgstr "Continue shopping"
 
 #: .\store\templates\store\cart.html:15
-#: .\store\templates\store\checkout.html:74
+#: .\store\templates\store\checkout.html:75
 msgid "Items: "
 msgstr "Items: "
 
 #: .\store\templates\store\cart.html:16
-#: .\store\templates\store\checkout.html:75
+#: .\store\templates\store\checkout.html:76
 msgid "Total: "
 msgstr "Total: "
 
@@ -168,101 +243,108 @@ msgstr "Name"
 msgid "Email"
 msgstr "Email"
 
-#: .\store\templates\store\checkout.html:21
+#: .\store\templates\store\checkout.html:20
 msgid "Shipping Information:"
 msgstr "Shipping Information:"
 
-#: .\store\templates\store\checkout.html:25
-#: .\store\templates\store\checkout.html:27
+#: .\store\templates\store\checkout.html:24
+#: .\store\templates\store\checkout.html:26
 msgid "Address"
 msgstr "Address"
 
-#: .\store\templates\store\checkout.html:31
-#: .\store\templates\store\checkout.html:33
+#: .\store\templates\store\checkout.html:30
+#: .\store\templates\store\checkout.html:32
 msgid "City"
 msgstr "City"
 
-#: .\store\templates\store\checkout.html:37
+#: .\store\templates\store\checkout.html:36
 msgid "Zip Code"
 msgstr "Zip Code"
 
-#: .\store\templates\store\checkout.html:43
-#: .\store\templates\store\checkout.html:45
+#: .\store\templates\store\checkout.html:42
+#: .\store\templates\store\checkout.html:44
 msgid "Country"
 msgstr "Country"
 
-#: .\store\templates\store\checkout.html:50
+#: .\store\templates\store\checkout.html:48
 msgid "Continue"
 msgstr "Continue"
 
-#: .\store\templates\store\checkout.html:55
+#: .\store\templates\store\checkout.html:53
 msgid "Payment Options"
 msgstr "Payment Options"
 
-#: .\store\templates\store\checkout.html:62
+#: .\store\templates\store\checkout.html:60
 msgid "Back to cart"
 msgstr "Back to cart"
 
-#: .\store\templates\store\checkout.html:64
+#: .\store\templates\store\checkout.html:62
 msgid "Order Summary"
 msgstr "Order Summary"
 
-#: .\store\templates\store\main.html:34
+#: .\store\templates\store\main.html:35
 msgid "Store"
 msgstr "Store"
 
-#: .\store\templates\store\main.html:38
+#: .\store\templates\store\main.html:39
 msgid "Language"
 msgstr "Language"
 
-#: .\store\templates\store\main.html:41
+#: .\store\templates\store\main.html:42
 msgid "Choose language"
 msgstr "Choose language"
 
-#: .\store\templates\store\main.html:51
+#: .\store\templates\store\main.html:55
 msgid "Admin Page"
 msgstr "Admin Page"
 
-#: .\store\templates\store\main.html:54
+#: .\store\templates\store\main.html:58
 msgid "Add product"
 msgstr "Add product"
 
-#: .\store\templates\store\main.html:60
+#: .\store\templates\store\main.html:66
 msgid "Search"
 msgstr "Search"
 
-#: .\store\templates\store\main.html:71
+#: .\store\templates\store\main.html:78
 msgid "Price Filter"
 msgstr "Price Filter"
 
-#: .\store\templates\store\main.html:76
+#: .\store\templates\store\main.html:84
 msgid "Min Price: "
 msgstr "Min Price: "
 
-#: .\store\templates\store\main.html:81
+#: .\store\templates\store\main.html:88
 msgid "Max Price: "
 msgstr "Max Price: "
 
-#: .\store\templates\store\main.html:85
+#: .\store\templates\store\main.html:91
 msgid "Apply"
 msgstr "Apply"
 
-#: .\store\templates\store\main.html:93
+#: .\store\templates\store\main.html:100
 msgid "Profile"
 msgstr "Profile"
 
-#: .\store\templates\store\main.html:94
+#: .\store\templates\store\main.html:101
 msgid "Logout"
-msgstr "Logout"
+msgstr "Log out"
 
-#: .\store\templates\store\store.html:12
+#: .\store\templates\store\search.html:15 .\store\templates\store\store.html:14
 msgid "Add to Cart"
 msgstr "Add to Cart"
 
-#: .\store\templates\store\store.html:13
+#: .\store\templates\store\search.html:16 .\store\templates\store\store.html:15
 msgid "View"
 msgstr "View"
 
-#: .\store\templates\store\search.html:22
+#: .\store\templates\store\search.html:23
 msgid "No results found"
 msgstr "No results found"
+
+#: .\store\templates\store\store.html:19
+msgid "Are you sure you want to delete this product?"
+msgstr "Are you sure you want to delete this product?"
+
+msgid "Shooztars. All rights reserved."
+msgstr "Shooztars. All rights reserved."

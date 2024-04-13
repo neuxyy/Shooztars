@@ -12,10 +12,10 @@
         <p>{% trans 'Email:' %} {{ user.email }}</p>
 
         {% if user.is_staff %}
-            <p>{% trans 'Staff status:' %} {{ user.is_staff }}</p>
+            <p>{% trans 'Staff status: ' %} {{ user.is_staff }}</p>
         {% endif %}
 
-        <p>{% trans 'Date joined:' %} {{ user.date_joined }}</p>
+        <p>{% trans 'Date joined: ' %} {{ user.date_joined }}</p>
 
         <a href="{% url 'password_reset' %}" class="btn btn-primary reset-password">{% trans 'Reset Password' %}</a>
     </body>

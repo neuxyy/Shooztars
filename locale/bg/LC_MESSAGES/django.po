@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-10 23:29+0300\n"
+"POT-Creation-Date: 2024-04-13 18:50+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,81 +17,156 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\Shooztars\settings.py:114
+#: .\Shooztars\settings.py:115
 msgid "English"
 msgstr "Английски"
 
-#: .\Shooztars\settings.py:115
+#: .\Shooztars\settings.py:116
 msgid "Bulgarian"
 msgstr "Български"
 
 #: .\store\templates\accounts\login.html:7
-#: .\store\templates\accounts\login.html:44
-#: .\store\templates\accounts\register.html:7
-#: .\store\templates\accounts\register.html:73
-#: .\store\templates\store\main.html:96
+#: .\store\templates\accounts\login.html:40
+#: .\store\templates\store\main.html:103
 msgid "Login"
 msgstr "Вход"
 
 #: .\store\templates\accounts\login.html:21
-#: .\store\templates\store\main.html:44
-msgid "BG"
-msgstr "BG"
-
-#: .\store\templates\accounts\login.html:22
-#: .\store\templates\store\main.html:45
-msgid "EN"
-msgstr "EN"
-
-#: .\store\templates\accounts\login.html:25
 msgid "LOGIN"
 msgstr "Вход"
 
-#: .\store\templates\accounts\login.html:35
+#: .\store\templates\accounts\login.html:31
 msgid "Username ..."
-msgstr "Потребителско име..."
+msgstr "Потребителско име"
 
-#: .\store\templates\accounts\login.html:41
+#: .\store\templates\accounts\login.html:37
 msgid "Password ..."
-msgstr "Парола..."
+msgstr "Парола"
 
-#: .\store\templates\accounts\login.html:55
+#: .\store\templates\accounts\login.html:51
 msgid "Don't have an account?"
 msgstr "Нямате акаунт?"
 
-#: .\store\templates\accounts\login.html:55
+#: .\store\templates\accounts\login.html:51
 msgid "Sign Up"
-msgstr "Регистрация!"
+msgstr "Регистрация"
 
-#: .\store\templates\accounts\profile.html:6
-#: .\store\templates\store\main.html:92
+#: .\store\templates\accounts\login.html:57
+msgid "Forgot password?"
+msgstr "Забравена парола?"
+
+#: .\store\templates\accounts\login.html:57
+msgid "Reset password"
+msgstr "Нулиране на паролата"
+
+#: .\store\templates\accounts\password_reset.html:7
+#: .\store\templates\accounts\password_reset.html:23
+#: .\store\templates\accounts\password_reset_form.html:6
+msgid "Password Reset"
+msgstr "Нулиране на паролата"
+
+#: .\store\templates\accounts\password_reset.html:26
+msgid "Forgot your password?"
+msgstr "Забравили сте си паролата? "
+
+#: .\store\templates\accounts\password_reset.html:27
+msgid "Enter email address and a link will be sent shortly after!"
+msgstr "Въведете имейл адрес и ще ви бъде изпратен линк за създаване на нова парола!"
+
+#: .\store\templates\accounts\password_reset.html:36
+msgid "Submit"
+msgstr "Изпратете"
+
+#: .\store\templates\accounts\password_reset_complete.html:6
+msgid "Password Reset Complete"
+msgstr "Успешна промяна"
+
+#: .\store\templates\accounts\password_reset_complete.html:17
+msgid "Password reset complete"
+msgstr "Нулирането на паролата е извършено"
+
+#: .\store\templates\accounts\password_reset_complete.html:20
+msgid "Your password has been successfully changed."
+msgstr "Вашата парола беше успешно променена!"
+
+#: .\store\templates\accounts\password_reset_complete.html:21
+msgid "You can now log in with your new password."
+msgstr "Вече можете да влезете в системата с новата ви парола."
+
+#: .\store\templates\accounts\password_reset_complete.html:24
+#: .\store\templates\accounts\register.html:73
+msgid "Log in"
+msgstr "Вход"
+
+#: .\store\templates\accounts\password_reset_form.html:15
+msgid "Enter new password"
+msgstr "Нова парола"
+
+#: .\store\templates\accounts\password_reset_form.html:17
+msgid "Enter your new password"
+msgstr "Въведете вашата нова парола"
+
+#: .\store\templates\accounts\password_reset_form.html:25
+msgid "New Password"
+msgstr "Нова пароал"
+
+#: .\store\templates\accounts\password_reset_form.html:31
+msgid "Confirm New Password"
+msgstr "Повторете паролата"
+
+#: .\store\templates\accounts\password_reset_form.html:34
+#: .\store\templates\accounts\profile.html:20
+msgid "Reset Password"
+msgstr "Нулиране на паролата"
+
+#: .\store\templates\accounts\password_reset_sent.html:14
+msgid "PASSWORD RESET EMAIL SENT"
+msgstr "Изпратен e имейл за нулиране на паролата"
+
+#: .\store\templates\accounts\password_reset_sent.html:15
+msgid "An email has been sent with instructions to reset your password."
+msgstr "Имейлът съдържа линк и инструкции за възстановяване на паролата ви."
+
+#: .\store\templates\accounts\password_reset_sent.html:16
+msgid ""
+"If you do not receive an email, please make sure you have entered the "
+"correct email address and try again."
+msgstr "Ако не получите имейл, моля, уверете се, че сте въвели "
+"правилния имейл адрес и опитайте отново."
+
+#: .\store\templates\accounts\profile.html:9
+#: .\store\templates\store\main.html:99
 msgid "Welcome, "
 msgstr "Добре дошли, "
 
-#: .\store\templates\accounts\profile.html:7
-msgid "First name:"
-msgstr "Име:"
-
-#: .\store\templates\accounts\profile.html:8
-msgid "Last name:"
-msgstr "Фамилия:"
-
-#: .\store\templates\accounts\profile.html:9
-msgid "Email:"
-msgstr "E-mail"
-
 #: .\store\templates\accounts\profile.html:10
-msgid "Staff status:"
-msgstr "Служебен статус"
+msgid "First name:"
+msgstr "Име: "
 
 #: .\store\templates\accounts\profile.html:11
-msgid "Date joined:"
-msgstr "Дата на регистрация"
+msgid "Last name:"
+msgstr "Фамилия: "
+
+#: .\store\templates\accounts\profile.html:12
+msgid "Email:"
+msgstr "Имейл: "
+
+#: .\store\templates\accounts\profile.html:15
+msgid "Staff status: "
+msgstr "Админ статус: "
+
+#: .\store\templates\accounts\profile.html:18
+msgid "Date joined: "
+msgstr "Дата на регистрация на акаунта"
+
+#: .\store\templates\accounts\register.html:7
+msgid "Register"
+msgstr "Регистрация"
 
 #: .\store\templates\accounts\register.html:21
 #: .\store\templates\accounts\register.html:64
 msgid "Register Account"
-msgstr "Регистрация"
+msgstr "Регистрирайте се"
 
 #: .\store\templates\accounts\register.html:73
 msgid "Already have an account?"
@@ -99,11 +174,11 @@ msgstr "Вече имате акаунт?"
 
 #: .\store\templates\accounts\register.html:81
 msgid "Username.."
-msgstr "Потребителско име.."
+msgstr "Потребителско име"
 
 #: .\store\templates\accounts\register.html:82
 msgid "First Name.."
-msgstr "Име.."
+msgstr "Име"
 
 #: .\store\templates\accounts\register.html:83
 msgid "Last Name.."
@@ -111,15 +186,15 @@ msgstr "Фамилия"
 
 #: .\store\templates\accounts\register.html:84
 msgid "Email.."
-msgstr "E-mail.."
+msgstr "Имейл"
 
 #: .\store\templates\accounts\register.html:85
 msgid "Enter password..."
-msgstr "Добавете парола..."
+msgstr "Въведете парола"
 
 #: .\store\templates\accounts\register.html:86
 msgid "Re-enter Password..."
-msgstr "Напишете паролата отново..."
+msgstr "Повторете паролата"
 
 #: .\store\templates\store\add_product.html:5
 #: .\store\templates\store\add_product.html:9
@@ -128,17 +203,17 @@ msgstr "Добави продукт"
 
 #: .\store\templates\store\cart.html:8
 msgid "Continue shopping"
-msgstr "Продължете пазаруването"
+msgstr "Продължете с пазаруването"
 
 #: .\store\templates\store\cart.html:15
-#: .\store\templates\store\checkout.html:74
+#: .\store\templates\store\checkout.html:75
 msgid "Items: "
-msgstr "Брой продукта: "
+msgstr "Продукти: "
 
 #: .\store\templates\store\cart.html:16
-#: .\store\templates\store\checkout.html:75
+#: .\store\templates\store\checkout.html:76
 msgid "Total: "
-msgstr "Обща цена: "
+msgstr "Общо: "
 
 #: .\store\templates\store\cart.html:18
 msgid "Checkout"
@@ -146,7 +221,7 @@ msgstr "Плащане"
 
 #: .\store\templates\store\cart.html:30
 msgid "Item"
-msgstr "Продукт"
+msgstr "Продукти"
 
 #: .\store\templates\store\cart.html:31
 msgid "Price"
@@ -158,7 +233,7 @@ msgstr "Количество"
 
 #: .\store\templates\store\cart.html:33
 msgid "Total"
-msgstr "Крайна цена"
+msgstr "Общо"
 
 #: .\store\templates\store\checkout.html:12
 msgid "Name"
@@ -166,103 +241,110 @@ msgstr "Име"
 
 #: .\store\templates\store\checkout.html:15
 msgid "Email"
-msgstr "E-mail"
+msgstr "Имейл"
 
-#: .\store\templates\store\checkout.html:21
+#: .\store\templates\store\checkout.html:20
 msgid "Shipping Information:"
 msgstr "Информация за доставка:"
 
-#: .\store\templates\store\checkout.html:25
-#: .\store\templates\store\checkout.html:27
+#: .\store\templates\store\checkout.html:24
+#: .\store\templates\store\checkout.html:26
 msgid "Address"
 msgstr "Адрес"
 
-#: .\store\templates\store\checkout.html:31
-#: .\store\templates\store\checkout.html:33
+#: .\store\templates\store\checkout.html:30
+#: .\store\templates\store\checkout.html:32
 msgid "City"
 msgstr "Град"
 
-#: .\store\templates\store\checkout.html:37
+#: .\store\templates\store\checkout.html:36
 msgid "Zip Code"
-msgstr "ZIP код"
+msgstr "Пощенски код"
 
-#: .\store\templates\store\checkout.html:43
-#: .\store\templates\store\checkout.html:45
+#: .\store\templates\store\checkout.html:42
+#: .\store\templates\store\checkout.html:44
 msgid "Country"
 msgstr "Държава"
 
-#: .\store\templates\store\checkout.html:50
+#: .\store\templates\store\checkout.html:48
 msgid "Continue"
 msgstr "Продължете"
 
-#: .\store\templates\store\checkout.html:55
+#: .\store\templates\store\checkout.html:53
 msgid "Payment Options"
-msgstr "Начин на плащане"
+msgstr "Начини на плащане "
 
-#: .\store\templates\store\checkout.html:62
+#: .\store\templates\store\checkout.html:60
 msgid "Back to cart"
 msgstr "Обратно към количката"
 
-#: .\store\templates\store\checkout.html:64
+#: .\store\templates\store\checkout.html:62
 msgid "Order Summary"
-msgstr "Изглед на поръчката"
+msgstr "Крайна поръчка"
 
-#: .\store\templates\store\main.html:34
+#: .\store\templates\store\main.html:35
 msgid "Store"
 msgstr "Каталог"
 
-#: .\store\templates\store\main.html:38
+#: .\store\templates\store\main.html:39
 msgid "Language"
 msgstr "Език"
 
-#: .\store\templates\store\main.html:41
+#: .\store\templates\store\main.html:42
 msgid "Choose language"
 msgstr "Изберете език"
 
-#: .\store\templates\store\main.html:51
+#: .\store\templates\store\main.html:55
 msgid "Admin Page"
-msgstr "Административна страница"
+msgstr "Админ. страница"
 
-#: .\store\templates\store\main.html:54
+#: .\store\templates\store\main.html:58
 msgid "Add product"
 msgstr "Добави продукт"
 
-#: .\store\templates\store\main.html:60
+#: .\store\templates\store\main.html:66
 msgid "Search"
 msgstr "Търсене"
 
-#: .\store\templates\store\main.html:71
+#: .\store\templates\store\main.html:78
 msgid "Price Filter"
-msgstr "Филтър на цена"
+msgstr "Филтър по цена"
 
-#: .\store\templates\store\main.html:76
+#: .\store\templates\store\main.html:84
 msgid "Min Price: "
-msgstr "От: "
+msgstr "Мин. цена: "
 
-#: .\store\templates\store\main.html:81
+#: .\store\templates\store\main.html:88
 msgid "Max Price: "
-msgstr "До: "
+msgstr "Макс. цена: "
 
-#: .\store\templates\store\main.html:85
+#: .\store\templates\store\main.html:91
 msgid "Apply"
-msgstr "Търси"
+msgstr "Приложи филтъра"
 
-#: .\store\templates\store\main.html:93
+#: .\store\templates\store\main.html:100
 msgid "Profile"
 msgstr "Профил"
 
-#: .\store\templates\store\main.html:94
+#: .\store\templates\store\main.html:101
 msgid "Logout"
 msgstr "Изход"
 
-#: .\store\templates\store\store.html:12
+#: .\store\templates\store\search.html:15 .\store\templates\store\store.html:14
 msgid "Add to Cart"
 msgstr "Добави в "
 
-#: .\store\templates\store\store.html:13
+#: .\store\templates\store\search.html:16 .\store\templates\store\store.html:15
 msgid "View"
-msgstr "Изглед"
+msgstr "Детайли"
 
-#: .\store\templates\store\search.html:22
+#: .\store\templates\store\search.html:23
 msgid "No results found"
 msgstr "Няма намерени резултати"
+
+#: .\store\templates\store\store.html:19
+msgid "Are you sure you want to delete this product?"
+msgstr "Сигурни ли сте, че искате да изтриете този продукт?"
+
+msgid "Shooztars. All rights reserved."
+msgstr "Shooztars. Всчики права запазени."

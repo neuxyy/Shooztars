@@ -3,8 +3,8 @@
 {% load static %}
 {% block content%}
     <body>
+        
         <div class="row">
-
             {% for product in results %}
             <div class="col-lg-4">
                 <img class="thumbnail" src="{{product.imageURL}}">
@@ -15,10 +15,18 @@
                     <button type="button" class="btn btn-outline-success" onclick="openWindow('{{product.name}}', '{{product.imageURL}}', '{{product.descriptionEN}}','{{product.descriptionBG}}')">{%trans "View"%}</button>
                     <h4 style="float: right">{{product.price|floatformat:2}}BGN</h4>
                 </div>
+                {% if request.user.is_staff %}
+                <form method="POST" action="{% url 'delete_product' product.id %}">
+                    {% csrf_token %}
+                    <button class="btn full-width-btn" type="submit">
+                        <img src="{% static 'images/garbage_bin.png' %}" alt="Remove product">
+                    </button>
+                </form>
+                {% endif %}
             </div>
             {% endfor %}
-
         </div>
+
         <script type="text/javascript" src="{% static 'js/view_button.js' %}"></script>
     </body>
 {% endblock content %}

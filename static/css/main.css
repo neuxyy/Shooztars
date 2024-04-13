@@ -109,3 +109,18 @@ h1,h2,h3,h4,h5,h6{
     background-color: rgb(11, 225, 11);
     border-color: rgb(11, 225, 11);
 }
+
+.full-width-btn {
+    width: 100%;
+	background-color: #ff9d00;
+	color: white;
+}
+
+.full-width-btn:hover {
+    background-color: red;
+}
+
+.full-width-btn img {
+    width: 10%;
+    height: auto;
+}

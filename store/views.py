@@ -78,6 +78,11 @@ def search_filter(request):
     
     return render(request, 'store/search.html', context)
 
+def delete_product(request, product_id):
+    product = Product.objects.get(id=product_id)
+    product.delete()
+    return redirect('store')
+
 def store(request):
     data = cartData(request)
     

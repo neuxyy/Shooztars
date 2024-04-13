@@ -16,13 +16,13 @@
                     <h4 style="float: right">{{product.price|floatformat:2}}BGN</h4>
                 </div>
                 {% if request.user.is_staff %}
-                <form method="POST" action="{% url 'delete_product' product.id %}">
+                <form method="POST" action="{% url 'delete_product' product.id %}" onsubmit="return confirm('{% trans 'Are you sure you want to delete this product?' %}');">
                     {% csrf_token %}
                     <button class="btn full-width-btn" type="submit">
                         <img src="{% static 'images/garbage_bin.png' %}" alt="Remove product">
                     </button>
                 </form>
-                {% endif %}
+            {% endif %}
             </div>
             {% endfor %}
         </div>

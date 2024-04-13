@@ -63,9 +63,14 @@ function submitFormData(){
           console.log('Success:', data)
           alert('Transaction completed')
           cart = {}
+          console.log(cart);
           document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
           window.location.href = storeUrl
         })
+        
+    .catch((error) => {
+        console.error('There has been a problem with your fetch operation:', error);
+    });
 }
 
 function getLang(name) {

@@ -169,14 +169,14 @@ def processOrder(request):
 
     else:
         customer, order = guestOrder(request, data)
-
+        
     total = float(data['form']['total'])
     order.transaction_id = transaction_id
-
-    if total == order.get_cart_total:
+    
+    if abs(total - order.get_cart_total) < 1:
         order.complete = True
     order.save()
-
+    
     if order.shipping == True:
         ShippingAddress.objects.create(
         customer=customer,

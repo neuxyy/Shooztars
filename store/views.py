@@ -169,11 +169,16 @@ def processOrder(request):
 
     else:
         customer, order = guestOrder(request, data)
+    
+    print(data['form']['total'])
         
-    total = float(data['form']['total'])
+    total = data['form']['total']
     order.transaction_id = transaction_id
     
-    if abs(total - order.get_cart_total) < 1:
+    print(total)
+    print(order.get_cart_total)
+    
+    if total == order.get_cart_total:
         order.complete = True
     order.save()
     

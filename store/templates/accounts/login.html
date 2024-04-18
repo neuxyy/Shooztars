@@ -41,11 +41,6 @@
                                 </div>
                             </form>
                         </div>
-
-                        {% for message in messages %}
-                            <p id="messages">{% trans message %}</p>
-                        {% endfor %}
-
                         <div class="mt-4">
                             <div class="d-flex justify-content-center links">
                                 {% trans "Don't have an account?" %} <a href="{% url 'register' %}" class="ml-2">{% trans 'Sign Up' %}</a>

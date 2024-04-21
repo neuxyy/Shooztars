@@ -35,7 +35,7 @@
 						<a class="nav-link" href="{% url 'store'%}">{%trans "Store"%}<span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
 							{%trans "Language"%}
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -44,18 +44,18 @@
 							<div class="text-center">
 								<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
 									<input name="next" type="hidden" value="{{ request.path }}">
-									<button name="language" type="submit" value="bg" class="btn btn-primary btn-lg" style="font-size: 42px; background-color: #1AD7ED; border-color: #1AD7ED;">🇧🇬</button>
-									<button name="language" type="submit" value="en" class="btn btn-primary btn-lg" style="font-size: 42px; background-color: #1AD7ED; border-color: #1AD7ED;">🇬🇧</button>
+									<button name="language" type="submit" value="bg" class="btn btn-primary btn-lg" style="font-size: 20px; background-color: #1AD7ED; border-color: #1AD7ED;">BG</button>
+									<button name="language" type="submit" value="en" class="btn btn-primary btn-lg" style="font-size: 20px; background-color: #1AD7ED; border-color: #1AD7ED;">EN</button>
 								</form>
 							</div>
 						</div>
 					</li>
 					{% if request.user.is_authenticated and request.user.is_staff %}
 					<li class="nav-item">
-						<a class="nav-link" href={% url 'admin:index' %}>{%trans "Admin Page"%}</a>
+						<a class="nav-link" href={% url 'admin:index' %} style="color: white;">{%trans "Admin Page"%}</a>
 					</li>
 					<li class="nav-item">
-						<button class="nav-link red-button" onclick="location.href='{% url 'add_product'%}'">{%trans "Add product"%}</button>
+						<button class="nav-link btn btn-warning" style="color: black;" onclick="location.href='{% url 'add_product'%}'">{%trans "Add product"%}</button>
 					</li>
 					{% endif %}
 				</ul>

@@ -49,7 +49,7 @@ function openWindow(name, imageUrl, descriptionEN, descriptionBG) {
     content.appendChild(title);
 
     var buttonElementEN = document.createElement('button');
-    buttonElementEN.textContent = '🇬🇧  ';
+    buttonElementEN.textContent = 'EN  ';
     buttonElementEN.id = 'buttonEN';
     buttonElementEN.style.outline = 'none';
     buttonElementEN.addEventListener('click', function() {
@@ -65,7 +65,7 @@ function openWindow(name, imageUrl, descriptionEN, descriptionBG) {
     content.appendChild(descriptionElementEN);
     
     var buttonElementBG = document.createElement('button');
-    buttonElementBG.textContent = '🇧🇬  ';
+    buttonElementBG.textContent = 'BG  ';
     buttonElementBG.id = 'buttonBG';
     buttonElementBG.style.outline = 'none';
 
